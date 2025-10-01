@@ -31,7 +31,6 @@ class App extends Component {
                 this.setState({ ballPosition: { left: this.state.posi+5+ "px"}, posi: this.state.posi + 5 })
             }
 		})
-      
     }
 
     render() {
