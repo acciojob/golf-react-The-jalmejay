@@ -11,6 +11,7 @@ class App extends Component {
         };
         this.renderChoice = this.renderBallOrButton.bind(this)
         this.buttonClickHandler = this.buttonClickHandler.bind(this)
+		this.handleKeyDown = this.handleKeyDown.bind(this)
     };
 
     buttonClickHandler() {
@@ -26,7 +27,7 @@ class App extends Component {
 
     // bind ArrowRight keydown event
     componentDidMount() {
-		document.addEventListener("Keydown",this.handleKeyDown())
+		document.addEventListener("Keydown",this.handleKeyDown)
     }
 	handleKeyDown(e) {
   if (!e) return;   
