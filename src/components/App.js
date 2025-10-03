@@ -26,13 +26,17 @@ class App extends Component {
 
     // bind ArrowRight keydown event
     componentDidMount() {
-		document.addEventListener("Keydown",(e)=>{
-			 if (e.keyCode === 39) {
-                this.setState({ ballPosition: { left: this.state.posi+5+ "px"}, posi: this.state.posi + 5 })
-            }
-		})
+		document.addEventListener("Keydown",handleKeyDown())
     }
 
+	handleKeyDown(e) {
+    if (e.keyCode === 39) { // ArrowRight key
+      this.setState((prevState) => ({
+        posi: prevState.posi + 5,
+        ballPosition: { left: prevState.posi + 5 + "px" }
+      }));
+    }
+  }
     render() {
         return (
             <div className="playground">
