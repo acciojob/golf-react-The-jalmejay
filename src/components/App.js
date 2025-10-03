@@ -35,10 +35,7 @@ componentWillUnmount() {
 	handleKeyDown(e) {
   if (!e) return;   
   if (e.keyCode === 39) {
-    this.setState((prevState) => ({
-      posi: prevState.posi + 5,
-      ballPosition: { left: prevState.posi + 5 + "px" }
-    }));
+      this.setState({ ballPosition: { left: this.state.posi+5+ "px"}, posi: this.state.posi + 5 })
   }
 }
 
