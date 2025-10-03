@@ -27,7 +27,7 @@ class App extends Component {
 
     // bind ArrowRight keydown event
     componentDidMount() {
-		document.addEventListener("keydown",this.handleKeyDown)
+		document.addEventListener("keydown",this.handleKeyDown);
     }
 componentWillUnmount() {
         document.removeEventListener("keydown", this.handleKeyDown); // Clean up the event listener
