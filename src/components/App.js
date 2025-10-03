@@ -30,13 +30,15 @@ class App extends Component {
     }
 
 	handleKeyDown(e) {
-    if (e.keyCode === 39) { // ArrowRight key
-      this.setState((prevState) => ({
-        posi: prevState.posi + 5,
-        ballPosition: { left: prevState.posi + 5 + "px" }
-      }));
-    }
+  if (!e) return;   
+  if (e.keyCode === 39) {
+    this.setState((prevState) => ({
+      posi: prevState.posi + 5,
+      ballPosition: { left: prevState.posi + 5 + "px" }
+    }));
   }
+}
+
     render() {
         return (
             <div className="playground">
