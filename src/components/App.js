@@ -28,9 +28,6 @@ class App extends Component {
     componentDidMount() {
 		document.addEventListener("Keydown",this.handleKeyDown())
     }
-	componentWillUnmount() {
-    document.removeEventListener("keydown", this.handleKeyDown);
-  }
 	handleKeyDown(e) {
   if (!e) return;   
   if (e.keyCode === 39) {
